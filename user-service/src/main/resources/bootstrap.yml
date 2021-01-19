@@ -1,0 +1,16 @@
+spring:
+  application:
+    admin:
+      jmx-name: user-service
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:8764
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}

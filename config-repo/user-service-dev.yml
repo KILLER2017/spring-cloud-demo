@@ -30,7 +30,6 @@ eureka:
     lease-renewal-interval-in-seconds: 30
     # 服务失效的时间，默认90秒
     lease-expiration-duration-in-seconds: 90
-    instance-id:
 
 mybatis-plus:
   # configuration:
