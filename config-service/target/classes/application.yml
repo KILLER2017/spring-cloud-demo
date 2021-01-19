@@ -8,6 +8,7 @@ spring:
           uri: https://gitee.com/huacaoye/spring-cloud-config-repo.git
           username: 543046534@qq.com
           password: angel.123
+          search-paths: config-repo
 
 server:
   port: 8764

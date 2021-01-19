@@ -1,7 +1,7 @@
 # 应用名称
 spring:
   application:
-    name: @pom.artifactId@
+    name: user-service
   datasource:
     url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=UTC
     username: root
