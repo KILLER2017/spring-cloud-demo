@@ -42,5 +42,3 @@ mybatis-plus:
   # type-enums-package: top.alvinsite.demo.model.enums
   global-config:
     banner: false
-
-from: git-dev
