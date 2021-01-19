@@ -1,0 +1,7 @@
+/.idea/
+/user-service-api/.mvn/
+/client/.idea/
+/config-service/.idea/
+/eureka/.idea/
+/user-service/.idea/
+/user-service-api/user-service-api.iml

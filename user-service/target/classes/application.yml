@@ -1,0 +1,44 @@
+# 应用名称
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=UTC
+    username: root
+    password: root
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-active: 50
+      max-idle: 10
+      max-wait: 10000
+      initial-size: 5
+    hikari:
+      max-lifetime: 1800000
+  # 应用服务 WEB 访问端口
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://localhost:8761/eureka/
+    # 缓存服务清单的更新时间，默认30秒
+    registry-fetch-interval-seconds: 30
+  instance:
+    # 服务续约任务调用间隔时间，默认30秒
+    lease-renewal-interval-in-seconds: 30
+    # 服务失效的时间，默认90秒
+    lease-expiration-duration-in-seconds: 90
+
+mybatis-plus:
+  # configuration:
+  # default-enum-type-handler: com.baomidou.mybatisplus.extension.handlers.MybatisEnumTypeHandler
+  #  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
+  type-aliases-package: top.alvinsite.user.model.entity
+  # type-handlers-package: top.alvinsite.demo.typehandler
+  # config-location: classpath:mybatis/mybatis-config.xml
+  # type-enums-package: top.alvinsite.demo.model.enums
+  global-config:
+    banner: false
