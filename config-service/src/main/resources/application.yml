@@ -9,6 +9,7 @@ spring:
           username: 543046534@qq.com
           password: angel.123
           search-paths: config-repo
+          default-label: master
 
 server:
   port: 8764
