@@ -56,3 +56,14 @@ mybatis-plus:
   global-config:
     banner: false
 from: git-default2
+
+#需要暴露监控端口给spring boot admin server访问
+management:
+  port
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
