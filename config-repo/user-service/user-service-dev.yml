@@ -43,4 +43,4 @@ mybatis-plus:
   global-config:
     banner: false
 
-from: git-dev-123
+from: git-dev-1234

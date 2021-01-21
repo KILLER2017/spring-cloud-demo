@@ -1,0 +1,14 @@
+server:
+  port: 8764
+
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://localhost:8761/eureka/
+    # 缓存服务清单的更新时间，默认30秒
+    registry-fetch-interval-seconds: 30
+  instance:
+    # 服务续约任务调用间隔时间，默认30秒
+    lease-renewal-interval-in-seconds: 30
+    # 服务失效的时间，默认90秒
+    lease-expiration-duration-in-seconds: 90
