@@ -32,7 +32,6 @@ public class UserController implements top.alvinsite.user.api.service.UserServic
      * @param captcha 验证码
      */
     @Override
-    @RequestMapping("login")
     public UserDTO login(String username, String password, String captcha) {
         if (!CAPTCHA.equals(captcha)) {
             throw new IllegalArgumentException("验证码错误");

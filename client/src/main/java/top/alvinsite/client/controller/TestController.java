@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.alvinsite.client.service.UserService;
+import top.alvinsite.common.exception.BaseException;
+import top.alvinsite.common.exception.GeneralStatuaCode;
 import top.alvinsite.user.api.model.dto.UserDTO;
 
 import java.util.Optional;
@@ -30,10 +32,13 @@ public class TestController {
     @PostMapping("login")
     public UserDTO login(String username, String password, String captcha) {
         if (!"123456".equals(captcha)) {
-            throw new IllegalArgumentException("验证码错误");
+            throw new BaseException(GeneralStatuaCode.A0240);
         }
 
-        return Optional.ofNullable(userService.login(username, password, captcha))
-                .orElseThrow(() -> new IllegalArgumentException("用户名密码错误"));
+        UserDTO userDTO = userService.login(username, password, captcha);
+        if (userDTO == null) {
+            throw new BaseException(GeneralStatuaCode.A0200, "用户名或密码错误");
+        }
+        return userDTO;
     }
 }

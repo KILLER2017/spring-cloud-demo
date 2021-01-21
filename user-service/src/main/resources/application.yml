@@ -15,8 +15,21 @@ spring:
       initial-size: 5
     hikari:
       max-lifetime: 1800000
-  # 应用服务 WEB 访问端口
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:172.31.40.7}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:alvin}
+    password: ${RABBIT_MQ_PASSWORD:candy.123}
+    virtual-host: test
+
 server:
+  # 应用服务 WEB 访问端口
   port: 8765
 
 eureka:

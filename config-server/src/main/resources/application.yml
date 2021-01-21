@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-service
+    name: config-server
   cloud:
     config:
       server:
@@ -9,7 +9,16 @@ spring:
           username: 543046534@qq.com
           password: angel.123
           search-paths: config-repo/{application}
-
+  security:
+    user:
+      name: admin
+      password: candy.123
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:172.31.40.7}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:alvin}
+    password: ${RABBIT_MQ_PASSWORD:candy.123}
+    virtual-host: test
 server:
   port: 8764
 

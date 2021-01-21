@@ -1,8 +1,9 @@
 package top.alvinsite.user.model.entity;
 
-import lombok.Data;
 
+import lombok.Data;
 import java.time.LocalDateTime;
+
 
 /**
  * 用户类
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
  * @date 2021/1/18 14:49
  */
 @Data
-public class User {
+public class User  {
 
     private String id;
 
@@ -24,4 +25,6 @@ public class User {
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
+
+
 }

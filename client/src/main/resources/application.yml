@@ -2,6 +2,10 @@
 spring:
   application:
     name: micro-service-01
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
 
   # 应用服务 WEB 访问端口
 server:
@@ -20,4 +24,8 @@ eureka:
     lease-expiration-duration-in-seconds: 90
 feign:
   hystrix:
-    enabled: true
+    enabled: false
+
+logging:
+  level:
+    top.alvinsite.common.aop.ControllerLogAdapter: debug

@@ -8,6 +8,6 @@ import top.alvinsite.client.service.fallback.UserServiceFallback;
  * @email 54304634@qq.com
  * @date 2021/1/18 17:31
  */
-@FeignClient(value = "user-service", fallback = UserServiceFallback.class)
+@FeignClient(value = "USER-SERVICE")
 public interface UserService extends top.alvinsite.user.api.service.UserService {
 }
