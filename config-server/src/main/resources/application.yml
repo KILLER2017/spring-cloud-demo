@@ -27,6 +27,12 @@ server:
 
 
 
+#需要暴露监控端口给spring boot admin server访问
 management:
-  security:
-    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

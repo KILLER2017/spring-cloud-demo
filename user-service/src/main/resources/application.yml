@@ -59,7 +59,6 @@ from: git-default2
 
 #需要暴露监控端口给spring boot admin server访问
 management:
-  port
   endpoints:
     web:
       exposure:
