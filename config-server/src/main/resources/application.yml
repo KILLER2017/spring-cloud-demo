@@ -12,10 +12,6 @@ spring:
     bus:
       trace:
         enabled: true
-  security:
-    user:
-      name: admin
-      password: candy.123
   rabbitmq:
     host: ${RABBIT_MQ_HOST:172.31.40.7}
     port: ${RABBIT_MQ_PORT:5672}

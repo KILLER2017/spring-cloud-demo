@@ -6,8 +6,8 @@ spring:
       profile: dev
       label: master
       enabled: true
-      username: admin
-      password: candy.123
+      # username: admin
+      # password: candy.123
       discovery:
         enabled: true
         service-id: config-server
