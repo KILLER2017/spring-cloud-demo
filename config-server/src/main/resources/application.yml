@@ -13,7 +13,7 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:172.31.40.7}
+    host: ${RABBIT_MQ_HOST:127.0.0.1}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:alvin}
     password: ${RABBIT_MQ_PASSWORD:candy.123}
