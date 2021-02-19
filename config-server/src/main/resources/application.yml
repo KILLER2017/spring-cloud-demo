@@ -6,8 +6,8 @@ spring:
       server:
         git:
           uri: https://gitee.com/huacaoye/spring-cloud-config-repo.git
-          username: 543046534@qq.com
-          password: angel.123
+          username: XXXXXXXXX
+          password: XXXXXXXXX
           search-paths: config-repo/{application}
     bus:
       trace:
