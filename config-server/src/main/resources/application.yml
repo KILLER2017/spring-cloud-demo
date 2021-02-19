@@ -5,9 +5,9 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/huacaoye/spring-cloud-config-repo.git
-          username: XXXXXXXXX
-          password: XXXXXXXXX
+          uri: https://github.com/KILLER2017/spring-cloud-demo
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASSWORD}
           search-paths: config-repo/{application}
     bus:
       trace:
